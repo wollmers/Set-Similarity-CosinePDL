@@ -3,17 +3,21 @@ package Set::Similarity::CosinePDL;
 use strict;
 use warnings;
 
-use parent 'Set::Similarity';
+use namespace::autoclean;
 
 use PDL;
+
+use parent 'Set::Similarity';
+
 use Data::Dumper;
 
+our $VERSION = 0.001;
 
 sub from_sets {
 	my ($self, $set1, $set2) = @_;
 	return $self->_similarity(
-		[keys %$set1],
-		[keys %$set2]
+		$set1,
+		$set2
 	);
 }
 
@@ -43,10 +47,10 @@ sub build_index {
 	my @vecs;
 	for my $doc ( @{ $self->{'docs'} }) {
 		my $vec = $self->make_vector( $doc );
-		push @vecs, norm $vec;
+		push @vecs, PDL::norm $vec;
 	}
 	$self->{'doc_vectors'} = \@vecs;
-	print "Finished with word list\n";
+	#print "Finished with word list\n";
 }
 
 sub make_vector {
@@ -102,3 +106,101 @@ sub cosine {
 }
 
 1;
+
+
+__END__
+
+=head1 NAME
+
+Set::Similarity::Cosine - Cosine similarity for sets
+
+=head1 SYNOPSIS
+
+ use Set::Similarity::CosinePDL;
+ 
+ # object method
+ my $cosine = Set::Similarity::CosinePDL->new;
+ my $similarity = $cosine->similarity('Photographer','Fotograf');
+ 
+ # class method
+ my $cosine = 'Set::Similarity::CosinePDL';
+ my $similarity = $cosine->similarity('Photographer','Fotograf');
+ 
+ # from 2-grams
+ my $width = 2;
+ my $similarity = $cosine->similarity('Photographer','Fotograf',$width);
+ 
+ # from arrayref of tokens
+ my $similarity = $cosine->similarity(['a','b'],['b']);
+ 
+ # from hashref of features
+ my $bird = {
+   wings    => true,
+   eyes     => true,
+   feathers => true,
+   hairs    => false,
+   legs     => true,
+   arms     => false,
+ };
+ my $mammal = {
+   wings    => false,
+   eyes     => true,
+   feathers => false,
+   hairs    => true,
+   legs     => true,
+   arms     => true, 
+ };
+ my $similarity = $cosine->similarity($bird,$mammal);
+ 
+ # from arrayref sets
+ my $bird = [qw(
+   wings
+   eyes
+   feathers
+   legs
+ )];
+ my $mammal = [qw(
+   eyes
+   hairs
+   legs
+   arms
+ )];
+ my $similarity = $cosine->from_sets($bird,$mammal);
+
+=head1 DESCRIPTION
+
+=head2 Cosine similarity
+
+A intersection B / (sqrt(A) * sqrt(B))
+
+
+=head1 METHODS
+
+L<Set::Similarity::CosinePDL> inherits all methods from L<Set::Similarity> and implements the
+following new ones.
+
+=head2 from_sets
+
+  my $similarity = $object->from_sets(['a'],['b']);
+ 
+This method expects two arrayrefs of strings as parameters. The parameters are not checked, thus can lead to funny results or uncatched divisions by zero.
+ 
+If you want to use this method directly, you should take care that the elements are unique. Also you should catch the situation where one of the arrayrefs is empty (similarity is 0), or both are empty (similarity is 1).
+
+=head1 SOURCE REPOSITORY
+
+L<http://github.com/wollmers/Set-Similarity-CosinePDL>
+
+=head1 AUTHOR
+
+Helmut Wollmersdorfer, E<lt>helmut.wollmersdorfer@gmail.comE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2013-2014 by Helmut Wollmersdorfer
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=cut
+
