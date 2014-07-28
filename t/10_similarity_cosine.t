@@ -10,13 +10,8 @@ use Data::Dumper;
 my $class = 'Set::Similarity::CosinePDL';
 
 use_ok($class);
-#use Set::Similarity::CosinePDL;
 
-#my $object = new_ok($class);
-my $object = $class->new;
-
-
-#my $object = $class;
+my $object = new_ok($class);
 
 sub d3 { sprintf('%.3f',shift) }
 
