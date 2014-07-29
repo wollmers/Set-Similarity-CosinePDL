@@ -1,6 +1,7 @@
 Revision history for Set::Similarity::CosinePDL
 
 {{$NEXT}}
+       - tests need proper rounding on some platforms
 
 0.001  2014-07-28 20:06:38 CEST
        - Initial release.
