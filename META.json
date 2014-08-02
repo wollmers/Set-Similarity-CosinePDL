@@ -39,7 +39,7 @@
             "PDL" : "0",
             "Set::Similarity" : "0.009",
             "namespace::autoclean" : "0",
-            "perl" : "5.008005"
+            "perl" : "5.006000"
          }
       },
       "test" : {
@@ -60,7 +60,7 @@
          "web" : "https://github.com/wollmers/Set-Similarity-CosinePDL"
       }
    },
-   "version" : "0.002",
+   "version" : "0.003",
    "x_contributors" : [
       "Helmut Wollmersdorfer <helmut@wollmersdorfer.at>"
    ]
