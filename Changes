@@ -1,6 +1,7 @@
 Revision history for Set::Similarity::CosinePDL
 
 {{$NEXT}}
+       - change minimal Perl version to 5.6
 
 0.002  2014-07-29 21:37:17 CEST
        - tests need proper rounding on some platforms
