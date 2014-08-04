@@ -60,7 +60,7 @@
          "web" : "https://github.com/wollmers/Set-Similarity-CosinePDL"
       }
    },
-   "version" : "0.003",
+   "version" : "0.004",
    "x_contributors" : [
       "Helmut Wollmersdorfer <helmut@wollmersdorfer.at>"
    ]

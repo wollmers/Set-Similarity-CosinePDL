@@ -11,7 +11,7 @@ use parent 'Set::Similarity';
 
 use Data::Dumper;
 
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 sub from_sets {
 	my ($self, $set1, $set2) = @_;
