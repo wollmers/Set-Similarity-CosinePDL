@@ -9,7 +9,7 @@ use PDL;
 
 use parent 'Set::Similarity';
 
-our $VERSION = '0.004';
+our $VERSION = '0.005';
 
 sub from_sets {
 	my ($self, $set1, $set2) = @_;
