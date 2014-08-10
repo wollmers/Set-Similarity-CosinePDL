@@ -12,25 +12,13 @@ use parent 'Set::Similarity';
 our $VERSION = '0.005';
 
 sub from_sets {
-	my ($self, $set1, $set2) = @_;
-	return $self->_similarity(
-		$set1,
-		$set2
-	);
-}
+  my ($self, $set1, $set2) = @_;
+  $self->make_elem_list($set1,$set2);
 
-sub _similarity {
-  my ( $self, $tokens1,$tokens2 ) = @_;
-	
-  $self->make_elem_list($tokens1,$tokens2);
-
-  my $vector1 = $self->make_vector( $tokens1 );
-  my $vector2 = $self->make_vector( $tokens2 );	
-	
   return $self->cosine( 
-	norm($vector1), 
-	norm($vector2) 
-  );
+	norm($self->make_vector( $set1 )), 
+	norm($self->make_vector( $set2 )) 
+  );	
 }
 
 sub make_vector {
@@ -97,50 +85,6 @@ Set::Similarity::Cosine - Cosine similarity for sets
  my $cosine = Set::Similarity::CosinePDL->new;
  my $similarity = $cosine->similarity('Photographer','Fotograf');
  
- # class method
- my $cosine = 'Set::Similarity::CosinePDL';
- my $similarity = $cosine->similarity('Photographer','Fotograf');
- 
- # from 2-grams
- my $width = 2;
- my $similarity = $cosine->similarity('Photographer','Fotograf',$width);
- 
- # from arrayref of tokens
- my $similarity = $cosine->similarity(['a','b'],['b']);
- 
- # from hashref of features
- my $bird = {
-   wings    => true,
-   eyes     => true,
-   feathers => true,
-   hairs    => false,
-   legs     => true,
-   arms     => false,
- };
- my $mammal = {
-   wings    => false,
-   eyes     => true,
-   feathers => false,
-   hairs    => true,
-   legs     => true,
-   arms     => true, 
- };
- my $similarity = $cosine->similarity($bird,$mammal);
- 
- # from arrayref sets
- my $bird = [qw(
-   wings
-   eyes
-   feathers
-   legs
- )];
- my $mammal = [qw(
-   eyes
-   hairs
-   legs
-   arms
- )];
- my $similarity = $cosine->from_sets($bird,$mammal);
 
 =head1 DESCRIPTION
 

@@ -1,7 +1,7 @@
 Revision history for Set::Similarity::CosinePDL
 
 {{$NEXT}}
-
+       - code simplification
 0.005  2014-08-05 22:35:52 CEST
        - code cleanup
 
