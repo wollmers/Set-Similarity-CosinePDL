@@ -1,9 +1,10 @@
 Revision history for Set::Similarity::CosinePDL
 
 {{$NEXT}}
+       - badges in pod
 
 0.007  2014-08-16 07:49:34 CEST
-       -add travis
+       - add travis
 
 0.006  2014-08-10 08:54:27 CEST
        - code simplification
