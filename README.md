@@ -4,10 +4,9 @@ Set::Similarity::CosinePDL - Cosine similarity for sets PDL implementation
 
 <div>
 
+    <a href="https://travis-ci.org/wollmers/Set-Similarity-CosinePDL"><img src="https://travis-ci.org/wollmers/Set-Similarity-CosinePDL.png" alt="Set-Similarity-CosinePDL"></a>
+    <a href='https://coveralls.io/r/wollmers/Set-Similarity-CosinePDL?branch=master'><img src='https://coveralls.io/repos/wollmers/Set-Similarity-CosinePDL/badge.png?branch=master' alt='Coverage Status' /></a>
 </div>
-
-<a href="https://travis-ci.org/wollmers/Set-Similarity-CosinePDL"><img src="https://travis-ci.org/wollmers/Set-Similarity-CosinePDL.png" alt="Set-Similarity-CosinePDL"></a>
-<a href='https://coveralls.io/r/wollmers/Set-Similarity-CosinePDL?branch=master'><img src='https://coveralls.io/repos/wollmers/Set-Similarity-CosinePDL/badge.png?branch=master' alt='Coverage Status' /></a>
 
 # SYNOPSIS
 
