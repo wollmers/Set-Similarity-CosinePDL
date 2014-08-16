@@ -1,5 +1,5 @@
 {
-   "abstract" : "Cosine similarity for sets",
+   "abstract" : "Cosine similarity for sets PDL implementation",
    "author" : [
       "Helmut Wollmersdorfer, <helmut.wollmersdorfer@gmail.com>"
    ],
@@ -60,7 +60,7 @@
          "web" : "https://github.com/wollmers/Set-Similarity-CosinePDL"
       }
    },
-   "version" : "0.006",
+   "version" : "0.007",
    "x_contributors" : [
       "Helmut Wollmersdorfer <helmut@wollmersdorfer.at>"
    ]

@@ -1,6 +1,8 @@
 Revision history for Set::Similarity::CosinePDL
 
 {{$NEXT}}
+
+0.007  2014-08-16 07:49:34 CEST
        -add travis
 
 0.006  2014-08-10 08:54:27 CEST
