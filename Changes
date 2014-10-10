@@ -1,6 +1,7 @@
 Revision history for Set::Similarity::CosinePDL
 
 {{$NEXT}}
+       requires Set::Similarity 0.022
 
 0.008  2014-08-16 23:44:36 CEST
        - badges in pod
