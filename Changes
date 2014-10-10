@@ -1,6 +1,8 @@
 Revision history for Set::Similarity::CosinePDL
 
 {{$NEXT}}
+
+0.009  2014-10-10 10:56:15 CEST
        requires Set::Similarity 0.022
 
 0.008  2014-08-16 23:44:36 CEST

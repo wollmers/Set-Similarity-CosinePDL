@@ -37,7 +37,7 @@
       "runtime" : {
          "requires" : {
             "PDL" : "0",
-            "Set::Similarity" : "0.009",
+            "Set::Similarity" : "0.022",
             "namespace::autoclean" : "0",
             "perl" : "5.006000"
          }
@@ -60,7 +60,7 @@
          "web" : "https://github.com/wollmers/Set-Similarity-CosinePDL"
       }
    },
-   "version" : "0.008",
+   "version" : "0.009",
    "x_contributors" : [
       "Helmut Wollmersdorfer <helmut@wollmersdorfer.at>"
    ]
