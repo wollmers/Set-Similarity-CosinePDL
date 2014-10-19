@@ -13,17 +13,17 @@ our $VERSION = '0.009';
 
 sub from_sets {
   my ($self, $set1, $set2) = @_;
-  $self->make_elem_list($set1,$set2);
+  $self->_make_elem_list($set1,$set2);
 
-  return $self->cosine( 
-	norm($self->make_vector( $set1 )), 
-	norm($self->make_vector( $set2 )) 
+  return $self->_cosine( 
+	norm($self->_make_vector( $set1 )), 
+	norm($self->_make_vector( $set2 )) 
   );	
 }
 
-sub make_vector {
+sub _make_vector {
   my ( $self, $tokens ) = @_;
-  my %elements = $self->get_elements( $tokens );
+  my %elements = $self->_get_elements( $tokens );
   my $vector = zeroes $self->{'elem_count'};
 	
   for my $key ( keys %elements ) {
@@ -34,18 +34,18 @@ sub make_vector {
   return $vector;
 }
 
-sub get_elements {			
+sub _get_elements {			
   my ( $self, $tokens ) = @_;
   my %elements;  
   do { $_++ } for @elements{@$tokens};
   return %elements;
 }	
 
-sub make_elem_list {
+sub _make_elem_list {
   my ( $self,$tokens1,$tokens2 ) = @_;
   my %all_elems;
   for my $tokens ( $tokens1,$tokens2 ) {
-	my %elements = $self->get_elements( $tokens );
+	my %elements = $self->_get_elements( $tokens );
 	for my $key ( keys %elements ) {
 	  $all_elems{$key} += $elements{$key};
 	}
@@ -62,7 +62,7 @@ sub make_elem_list {
 }
 
 # Assumes both incoming vectors are normalized
-sub cosine {
+sub _cosine {
   my ( $self, $vec1, $vec2 ) = @_;
   my $cos = inner( $vec1, $vec2 );	# inner product
   return $cos->sclr();  # converts PDL object to Perl scalar
