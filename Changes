@@ -1,6 +1,8 @@
 Revision history for Set::Similarity::CosinePDL
 
 {{$NEXT}}
+
+0.010  2014-10-19 22:22:13 CEST
        - naming of internal methods
 
 0.009  2014-10-10 10:56:15 CEST
