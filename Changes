@@ -1,6 +1,7 @@
 Revision history for Set::Similarity::CosinePDL
 
 {{$NEXT}}
+       - improved travis, badges
 
 0.010  2014-10-19 22:22:13 CEST
        - naming of internal methods
