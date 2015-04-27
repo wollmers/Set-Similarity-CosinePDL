@@ -3,9 +3,10 @@
 Set::Similarity::CosinePDL - Cosine similarity for sets PDL implementation
 
 <div>
-
     <a href="https://travis-ci.org/wollmers/Set-Similarity-CosinePDL"><img src="https://travis-ci.org/wollmers/Set-Similarity-CosinePDL.png" alt="Set-Similarity-CosinePDL"></a>
     <a href='https://coveralls.io/r/wollmers/Set-Similarity-CosinePDL?branch=master'><img src='https://coveralls.io/repos/wollmers/Set-Similarity-CosinePDL/badge.png?branch=master' alt='Coverage Status' /></a>
+    <a href='http://cpants.cpanauthors.org/dist/Set-Similarity-CosinePDL'><img src='http://cpants.cpanauthors.org/dist/Set-Similarity-CosinePDL.png' alt='Kwalitee Score' /></a>
+    <a href="http://badge.fury.io/pl/Set-Similarity-CosinePDL"><img src="https://badge.fury.io/pl/Set-Similarity-CosinePDL.svg" alt="CPAN version" height="18"></a>
 </div>
 
 # SYNOPSIS
@@ -45,9 +46,13 @@ If you want to use this method directly, you should take care that the elements 
 
 Helmut Wollmersdorfer, <helmut.wollmersdorfer@gmail.com>
 
+<div>
+    <a href='http://cpants.cpanauthors.org/author/wollmers'><img src='http://cpants.cpanauthors.org/author/wollmers.png' alt='Kwalitee Score' /></a>
+</div>
+
 # COPYRIGHT AND LICENSE
 
-Copyright (C) 2013-2014 by Helmut Wollmersdorfer
+Copyright (C) 2013-2015 by Helmut Wollmersdorfer
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
