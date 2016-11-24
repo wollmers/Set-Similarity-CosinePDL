@@ -44,7 +44,7 @@ If you want to use this method directly, you should take care that the elements 
 
 # AUTHOR
 
-Helmut Wollmersdorfer, <helmut.wollmersdorfer@gmail.com>
+Helmut Wollmersdorfer, &lt;helmut.wollmersdorfer@gmail.com>
 
 <div>
     <a href='http://cpants.cpanauthors.org/author/wollmers'><img src='http://cpants.cpanauthors.org/author/wollmers.png' alt='Kwalitee Score' /></a>
