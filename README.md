@@ -12,11 +12,10 @@ Set::Similarity::CosinePDL - Cosine similarity for sets PDL implementation
 # SYNOPSIS
 
     use Set::Similarity::CosinePDL;
-    
+
     # object method
     my $cosine = Set::Similarity::CosinePDL->new;
     my $similarity = $cosine->similarity('Photographer','Fotograf');
-    
 
 # DESCRIPTION
 
@@ -31,8 +30,7 @@ following new ones.
 
 ## from\_sets
 
-     my $similarity = $object->from_sets(['a'],['b']);
-    
+    my $similarity = $object->from_sets(['a'],['b']);
 
 This method expects two arrayrefs of strings as parameters. The parameters are not checked, thus can lead to funny results or uncatched divisions by zero.
 
@@ -52,7 +50,7 @@ Helmut Wollmersdorfer, <helmut.wollmersdorfer@gmail.com>
 
 # COPYRIGHT AND LICENSE
 
-Copyright (C) 2013-2015 by Helmut Wollmersdorfer
+Copyright (C) 2013-2020 by Helmut Wollmersdorfer
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
