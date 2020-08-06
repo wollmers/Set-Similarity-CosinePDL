@@ -26,7 +26,7 @@ A intersection B / (sqrt(A) \* sqrt(B))
 
 # METHODS
 
-[Set::Similarity::CosinePDL](https://metacpan.org/pod/Set::Similarity::CosinePDL) inherits all methods from [Set::Similarity](https://metacpan.org/pod/Set::Similarity) and implements the
+[Set::Similarity::CosinePDL](https://metacpan.org/pod/Set%3A%3ASimilarity%3A%3ACosinePDL) inherits all methods from [Set::Similarity](https://metacpan.org/pod/Set%3A%3ASimilarity) and implements the
 following new ones.
 
 ## from\_sets
@@ -44,7 +44,7 @@ If you want to use this method directly, you should take care that the elements 
 
 # AUTHOR
 
-Helmut Wollmersdorfer, &lt;helmut.wollmersdorfer@gmail.com>
+Helmut Wollmersdorfer, <helmut.wollmersdorfer@gmail.com>
 
 <div>
     <a href='http://cpants.cpanauthors.org/author/wollmers'><img src='http://cpants.cpanauthors.org/author/wollmers.png' alt='Kwalitee Score' /></a>
